@@ -1,6 +1,6 @@
-CREATE DATABASE gestion_educativa;
+CREATE DATABASE prueba1sisedu;
 
-USE gestion_educativa;
+USE prueba1sisedu;
 
 CREATE TABLE estudiantes (
     id INT AUTO_INCREMENT PRIMARY KEY,
