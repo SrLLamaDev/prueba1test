@@ -1,0 +1,23 @@
+CREATE DATABASE gestion_educativa;
+
+USE gestion_educativa;
+
+CREATE TABLE estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    direccion TEXT,
+    telefono VARCHAR(20),
+    dni_encrypted VARBINARY(255) NOT NULL,  -- DNI encriptado
+    nombre_padre VARCHAR(100),
+    nombre_madre VARCHAR(100),
+    historial_medico_encrypted TEXT  -- Información médica encriptada
+);
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    rol ENUM('admin', 'docente', 'secretario') NOT NULL
+);

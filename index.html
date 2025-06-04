@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Educativa</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea { width: 100%; padding: 8px; }
+        button { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .student-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Gestión Educativa</h1>
+    
+    <div id="app">
+        <h2>Registrar Nuevo Estudiante</h2>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI (se encriptará):</label>
+                <input type="text" id="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="historial_medico">Historial Médico (se encriptará):</label>
+                <textarea id="historial_medico" rows="4"></textarea>
+            </div>
+            <button type="submit">Guardar Estudiante</button>
+        </form>
+
+        <h2>Lista de Estudiantes</h2>
+        <div id="studentList"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
